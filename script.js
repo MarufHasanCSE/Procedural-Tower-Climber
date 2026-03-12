@@ -53,10 +53,10 @@ function update() {
 
     player.onGround = false;
     platforms.forEach(p => {
-        if (player.vy > 0 && 
-            player.x < p.x + p.w && 
-            player.x + player.w > p.x && 
-            player.y + player.h > p.y && 
+        if (player.vy > 0 &&
+            player.x < p.x + p.w &&
+            player.x + player.w > p.x &&
+            player.y + player.h > p.y &&
             player.y + player.h < p.y + p.h + player.vy) {
             player.y = p.y - player.h;
             player.vy = 0;
@@ -87,7 +87,7 @@ function update() {
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
+
     ctx.fillStyle = '#38bdf8';
     ctx.fillRect(player.x, player.y, player.w, player.h);
 
